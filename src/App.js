@@ -1,24 +1,18 @@
 import './App.css';
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import Picture from "./picture/Picture";
+import Picture from "./components/PictureBox/Picture/Picture";
+import PictureBox from "./components/PictureBox/PictureBox";
 
 class App extends Component {
 
 
   render() {
-    let pics = this.props.waiting.map((waiting, index) => {
-      return (
-          <Picture
-              key={index}
-              url={waiting.url}
-          />
-      )
-    })
+
     return (
         <div className={'App'}>
-          {pics}
-          <img src="./img/waiting/waiting_1.jpg" alt=""/>
+          <PictureBox block={this.props.sendoff}/>
+          <PictureBox block={this.props.waiting}/>
         </div>
     )
   }
@@ -26,6 +20,7 @@ class App extends Component {
 
 function mapStateToProps(state){
   return{
+    sendoff: state.sendoff,
     waiting: state.waiting,
   }
 }

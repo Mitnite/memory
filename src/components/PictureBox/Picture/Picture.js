@@ -4,7 +4,7 @@ import './Picture.css';
 const Picture = props => {
   return (
       <div className={'Picture'}>
-        <img src={props.url}/>
+        <img src={props.url} alt='фотография'/>
       </div>
   )
 }
