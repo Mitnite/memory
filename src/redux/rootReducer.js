@@ -10,6 +10,14 @@ import sendoff_4 from '../img/sendoff/sendoff_4.jpg'
 
 
 const initialState = {
+  sendoff: [
+    {url: sendoff},
+    {url: sendoff_1},
+    {url: sendoff_2},
+    {url: sendoff_3},
+    {url: sendoff_4},
+  ],
+
   waiting: [
     {url: waiting_1},
     {url: waiting_2},
@@ -17,14 +25,7 @@ const initialState = {
     {url: waiting_4},
 
   ],
-  sendoff: [
-    {url: sendoff},
-    {url: sendoff_1},
-    {url: sendoff_2},
-    {url: sendoff_3},
-    {url: sendoff_4},
 
-  ]
 
 
 }

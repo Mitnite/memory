@@ -1,3 +1,10 @@
+.Picture{
+    width: 650px;
+    margin: 0 auto 50px auto;
+    height: auto;
+}
 img{
-    width: 50%;
+    width: 100%;
+    border: 50px solid white;
+    padding: 0;
 }
