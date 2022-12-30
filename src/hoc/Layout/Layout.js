@@ -6,7 +6,11 @@ import Drawer from "../../components/Navigation/Drawer/Drawer";
 export default class Layout extends Component {
 
   state = {
-    menu: false
+    menu: false,
+    links: [
+      {name: 'Проводы', link: '#sendoff'},
+      {name: 'Ожидание', link: '#waiting'}
+    ]
   }
 
 
@@ -29,6 +33,7 @@ export default class Layout extends Component {
           <Drawer
               isOpen={this.state.menu}
               onClose={this.menuCloseHandler}
+              links={this.state.links}
           />
 
           <MenuToggle

@@ -1,0 +1,19 @@
+
+.DrawerItems{
+    /*margin-bottom: 15px;*/
+}
+
+.DrawerItems a{
+    color: #363f54;
+    font-size: 30px;
+    text-decoration: none;
+    background-color: white;
+    position: relative;
+    padding: 0 20px 10px 20px;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+.DrawerItems a:hover, .active{
+    opacity: .7;
+}

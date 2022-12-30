@@ -8,3 +8,13 @@ img{
     border: 50px solid white;
     padding: 0;
 }
+
+@media screen and (max-width: 450px){
+    .Picture{
+        width: 200px;
+        margin: 0 auto 15px auto;
+    }
+    img{
+        border: 15px solid white;
+    }
+}

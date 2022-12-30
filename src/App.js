@@ -17,10 +17,10 @@ class App extends Component {
                 <h1>Добро пожаловать на сайт воспоминаний!</h1>
               </div>
 
-              <h2 className={'Title'}>ПРОВОДЫ И ЗАЩИТА ДИПЛОМА</h2>
+              <h2 className={'Title'} id='sendoff'>ПРОВОДЫ И ЗАЩИТА ДИПЛОМА</h2>
               <PictureBox block={this.props.sendoff}/>
 
-              <h2 className={'Title'}>ОЖИДАНИЕ</h2>
+              <h2 className={'Title'} id='waiting'>ОЖИДАНИЕ</h2>
               <PictureBox block={this.props.waiting}/>
             </div>
           </div>
