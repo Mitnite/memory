@@ -8,11 +8,12 @@ import DrawerItems from "./DrawerItems/DrawerItems";
 export default class Drawer extends Component {
 
   state = {
-    clicked: false
+    clicked_2022: false,
+    clicked_2023: false
   }
 
-  renderLinks() {
-    return this.props.links.map((link, index) => {
+  renderLinks(links) {
+    return links.map((link, index) => {
       return (
           <DrawerItems
               key={index}
@@ -24,9 +25,15 @@ export default class Drawer extends Component {
     })
   }
 
-  clickHandler = () => {
+  click22Handler = () => {
     this.setState({
-      clicked: !this.state.clicked
+      clicked_2022: !this.state.clicked_2022
+    })
+  }
+
+  click23Handler = () => {
+    this.setState({
+      clicked_2023: !this.state.clicked_2023
     })
   }
 
@@ -43,10 +50,13 @@ export default class Drawer extends Component {
 
           <nav className={cls.join(' ')}>
             <ul>
-              <div onClick={this.clickHandler}>2022 год</div>
-              {this.state.clicked ? this.renderLinks() : null}
+              <div onClick={this.click22Handler}>2022 год</div>
+              {this.state.clicked_2022 ? this.renderLinks(this.props.links_2022) : null}
             </ul>
-            <ul> <div>2023 год</div></ul>
+            <ul>
+              <div onClick={this.click23Handler}>2023 год</div>
+              {this.state.clicked_2023 ? this.renderLinks(this.props.links_2023) : null}
+            </ul>
           </nav>
           {this.props.isOpen ? <Backdrop onClick={this.props.onClose}/> :null}
         </React.Fragment>

@@ -7,9 +7,19 @@ export default class Layout extends Component {
 
   state = {
     menu: false,
-    links: [
+    links_2022: [
       {name: 'Проводы', link: '#sendoff'},
-      {name: 'Ожидание', link: '#waiting'}
+      {name: 'Ожидание', link: '#waiting'},
+      {name: 'Заебавшие рожи', link: '#ministry'},
+      {name: 'Летняя фотосессия', link: '#photo_session'},
+      {name: 'День рождения', link: '#birthday'},
+      {name: 'Чокопайки', link: '#chokopai'},
+      {name: 'Глинтвейн', link: '#mulled'},
+      {name: 'Поход на батуты', link: '#trampoline'}
+
+    ],
+    links_2023: [
+      {name: 'Рыбинск', link: '#home'},
     ]
   }
 
@@ -33,7 +43,8 @@ export default class Layout extends Component {
           <Drawer
               isOpen={this.state.menu}
               onClose={this.menuCloseHandler}
-              links={this.state.links}
+              links_2022={this.state.links_2022}
+              links_2023={this.state.links_2023}
           />
 
           <MenuToggle

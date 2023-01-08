@@ -29,3 +29,13 @@
     position: relative;
     transition: opacity .3s;
 }
+
+@media screen and (max-width: 450px) {
+    .Drawer.close{
+        transform: translateX(-200px);
+    }
+    .Drawer{
+        max-width: 200px;
+    }
+
+}
