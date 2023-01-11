@@ -7,98 +7,162 @@ import Layout from "./hoc/Layout/Layout";
 
 class App extends Component {
 
+state ={
+  sendoff: 0,
+  waiting: 0,
+  ministry: 0,
+  photo_session: 0,
+  birthday: 0,
+  chokopai: 0,
+  mulled: 0,
+  trampoline: 0,
+
+}
+
   listenScrollEvent = e => {
-    // console.log(window.scrollY)
-        if (window.scrollY > 3130 && window.scrollY < 5612) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
+    if (this.state.sendoff === 0) {
+      let sendoff = this.getHeight('sendoff')
+      this.setState({sendoff})
+    }
 
-          document.getElementById('waiting').style.position = 'sticky'
-        } else if (window.scrollY > 5612 && window.scrollY < 15230) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.waiting === 0) {
+      let waiting = this.getHeight('waiting')
+      this.setState({waiting})
+    }
 
-          document.getElementById('ministry').style.position = 'sticky'
-        } else if (window.scrollY > 15230 && window.scrollY < 20570) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.ministry === 0) {
+      let ministry = this.getHeight('ministry')
+      this.setState({ministry})
+    }
 
-          document.getElementById('photo_session').style.position = 'sticky'
-        } else if (window.scrollY > 20570 && window.scrollY < 24452) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.photo_session === 0) {
+      let photo_session = this.getHeight('photo_session')
+      this.setState({photo_session})
+    }
 
-          document.getElementById('birthday').style.position = 'sticky'
-        } else if (window.scrollY > 24452 && window.scrollY < 31008) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.birthday === 0) {
+      let birthday = this.getHeight('birthday')
+      this.setState({birthday})
+    }
 
-          document.getElementById('chokopai').style.position = 'sticky'
-        } else if (window.scrollY > 31008 && window.scrollY < 35848) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.chokopai === 0) {
+      let chokopai = this.getHeight('chokopai')
+      this.setState({chokopai})
+    }
 
-          document.getElementById('mulled').style.position = 'sticky'
-        } else if (window.scrollY > 35847) {
-          document.getElementById('sendoff').style.position = 'static'
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.mulled === 0) {
+      let mulled = this.getHeight('mulled')
+      this.setState({mulled})
+    }
 
-          document.getElementById('trampoline').style.position = 'sticky'
-        } else {
-          document.getElementById('ministry').style.position = 'static'
-          document.getElementById('photo_session').style.position = 'static'
-          document.getElementById('birthday').style.position = 'static'
-          document.getElementById('chokopai').style.position = 'static'
-          document.getElementById('mulled').style.position = 'static'
-          document.getElementById('trampoline').style.position = 'static'
-          document.getElementById('waiting').style.position = 'static'
+    if (this.state.trampoline === 0) {
+      let trampoline = this.getHeight('trampoline')
+      this.setState({trampoline})
+    }
 
-          document.getElementById('sendoff').style.position = 'sticky'
-        }
+
+    console.log(this.state)
+
+    if (window.scrollY > this.state.waiting && window.scrollY < this.state.ministry) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+
+      document.getElementById('waiting').style.position = 'sticky'
+    } else if (window.scrollY > this.state.ministry && window.scrollY < this.state.photo_session) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('ministry').style.position = 'sticky'
+    } else if (window.scrollY > this.state.photo_session && window.scrollY < this.state.birthday) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('photo_session').style.position = 'sticky'
+    } else if (window.scrollY > this.state.birthday && window.scrollY < this.state.chokopai) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('birthday').style.position = 'sticky'
+    } else if (window.scrollY > this.state.chokopai && window.scrollY < this.state.mulled) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('chokopai').style.position = 'sticky'
+    } else if (window.scrollY > this.state.mulled && window.scrollY < this.state.trampoline) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('mulled').style.position = 'sticky'
+    } else if (window.scrollY > this.state.trampoline) {
+      document.getElementById('sendoff').style.position = 'static'
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('trampoline').style.position = 'sticky'
+    } else {
+      document.getElementById('ministry').style.position = 'static'
+      document.getElementById('photo_session').style.position = 'static'
+      document.getElementById('birthday').style.position = 'static'
+      document.getElementById('chokopai').style.position = 'static'
+      document.getElementById('mulled').style.position = 'static'
+      document.getElementById('trampoline').style.position = 'static'
+      document.getElementById('waiting').style.position = 'static'
+
+      document.getElementById('sendoff').style.position = 'sticky'
+    }
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenScrollEvent);
-
   }
 
-  render() {
+  getHeight = (id) => {
+    let elem = document.getElementById(id);
+    if (elem !== null) {
+      let rect = elem.getBoundingClientRect();
+      return rect.y
+/*      this.setState({
+        sendoff: rect.y
+      })*/
+    }
+  }
 
+
+  render() {
 
     return (
         <Layout>
@@ -118,8 +182,25 @@ class App extends Component {
               <PictureBox block={this.props.ministry}/>
 
               <h2 className={'Title'} id='photo_session'>ЛЕТНЯЯ ФОТОСЕССИЯ</h2>
-              <PictureBox block={this.props.photo_session}/>
 
+              <div style={{
+                display: 'block',
+                margin: '0 auto'
+
+              }}>
+
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  alignItems: 'stretch',
+                }}>
+                  <PictureBox block={this.props.photo_session_left}/>
+
+                  <PictureBox block={this.props.photo_session_right}/>
+                </div>
+
+              </div>
               <h2 className={'Title'} id='birthday'>День рождения</h2>
               <PictureBox block={this.props.birthday}/>
 
@@ -145,7 +226,8 @@ function mapStateToProps(state) {
     sendoff: state.sendoff,
     waiting: state.waiting,
     ministry: state.ministry,
-    photo_session: state.photo_session,
+    photo_session_left: state.photo_session_left,
+    photo_session_right: state.photo_session_right,
     birthday: state.birthday,
     chokopai: state.chokopai,
     mulled: state.mulled,

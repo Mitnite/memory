@@ -1,5 +1,5 @@
 .Picture{
-    width: 800px;
+    width: 600px;
     margin: 0 auto 50px auto;
     height: auto;
 }
@@ -10,6 +10,7 @@ img{
     width: 75%;
     border: 50px solid white;
     padding: 0;
+    margin: 0;
 }
 
 @media screen and (max-width: 450px){
@@ -19,5 +20,6 @@ img{
     }
     img{
         border: 15px solid white;
+        width: 75%;
     }
 }

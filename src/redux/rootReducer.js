@@ -20,11 +20,29 @@ import ministry_8 from '../img/summer/ministry/ministry_8.jpg';
 import ministry_9 from '../img/summer/ministry/ministry_9.jpg';
 import ministry_10 from '../img/summer/ministry/ministry_10.jpg';
 
-import photo_session_1 from '../img/summer/photo_session/photo_session_1.jpg';
-import photo_session_3 from '../img/summer/photo_session/photo_session_3.jpg';
-import photo_session_4 from '../img/summer/photo_session/photo_session_4.jpg';
-import photo_session_5 from '../img/summer/photo_session/photo_session_5.jpg';
-import photo_session_6 from '../img/summer/photo_session/photo_session_6.jpg';
+import photo_session_0 from '../img/summer/photo_session/photo_session_1.jpg';
+import photo_session_1 from '../img/summer/photo_session/photo_session_2.jpg';
+import photo_session_2 from '../img/summer/photo_session/photo_session_2_1.jpg';
+import photo_session_3 from '../img/summer/photo_session/photo_session_2_2.jpg';
+import photo_session_4 from '../img/summer/photo_session/photo_session_2_3.jpg';
+import photo_session_5 from '../img/summer/photo_session/photo_session_2_4.jpg';
+import photo_session_6 from '../img/summer/photo_session/photo_session_5.jpg';
+import photo_session_7 from '../img/summer/photo_session/photo_session_6.jpg';
+import photo_session_8 from '../img/summer/photo_session/photo_session_7.jpg';
+import photo_session_9 from '../img/summer/photo_session/photo_session_8.jpg';
+import photo_session_10 from '../img/summer/photo_session/photo_session_14.jpg';
+
+import photo_session0 from '../img/summer/photo_session/photo_session_13.jpg';
+import photo_session1 from '../img/summer/photo_session/photo_session_3.jpg';
+import photo_session2 from '../img/summer/photo_session/photo_session_3_1.jpg';
+import photo_session3 from '../img/summer/photo_session/photo_session_3_2.jpg';
+import photo_session4 from '../img/summer/photo_session/photo_session_3_3.jpg';
+import photo_session5 from '../img/summer/photo_session/photo_session_3_4.jpg';
+import photo_session6 from '../img/summer/photo_session/photo_session_4.jpg';
+import photo_session7 from '../img/summer/photo_session/photo_session_9.jpg';
+import photo_session8 from '../img/summer/photo_session/photo_session_10.jpg';
+import photo_session9 from '../img/summer/photo_session/photo_session_11.jpg';
+import photo_session10 from '../img/summer/photo_session/photo_session_15.jpg';
 
 import birthday_1 from '../img/summer/birthday/birthday_1.jpg';
 import birthday_2 from '../img/summer/birthday/birthday_2.jpg';
@@ -68,8 +86,11 @@ const initialState = {
     {url: ministry_1}, {url: ministry_2}, {url: ministry_3}, {url: ministry_4}, {url: ministry_5}, {url: ministry_6}, {url: ministry_7}, {url: ministry_8}, {url: ministry_9}, {url: ministry_10}
   ],
 
-  photo_session: [
-    {url: photo_session_1}, {url: photo_session_3}, {url: photo_session_4}, {url: photo_session_5}, {url: photo_session_6}
+  photo_session_left: [
+    {url: photo_session_0}, {url: photo_session_1}, {url: photo_session_2}, {url: photo_session_3}, {url: photo_session_4}, {url: photo_session_5}, {url: photo_session_6}, {url: photo_session_7}, {url: photo_session_8}, {url: photo_session_9}, {url: photo_session_10}
+  ],
+  photo_session_right: [
+    {url: photo_session0}, {url: photo_session1}, {url: photo_session2}, {url: photo_session3}, {url: photo_session4}, {url: photo_session5}, {url: photo_session6}, {url: photo_session7}, {url: photo_session8}, {url: photo_session9}, {url: photo_session10}
   ],
 
   birthday: [
