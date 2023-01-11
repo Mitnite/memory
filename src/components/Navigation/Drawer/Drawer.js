@@ -44,11 +44,11 @@ export default class Drawer extends Component {
     if (!this.props.isOpen) {
       cls.push('close')
     }
-
     return (
         <React.Fragment>
 
           <nav className={cls.join(' ')}>
+
             <ul>
               <div onClick={this.click22Handler}>2022 год</div>
               {this.state.clicked_2022 ? this.renderLinks(this.props.links_2022) : null}

@@ -7,6 +7,30 @@ export default class Layout extends Component {
 
   state = {
     menu: false,
+
+    links: [
+      {year: [
+          {seasons: [
+              {name: 'Проводы', link: '#sendoff'},
+              {name: 'Ожидание', link: '#waiting'},
+              {name: 'Заебавшие рожи', link: '#ministry'},
+              {name: 'Летняя фотосессия', link: '#photo_session'},
+              {name: 'День рождения', link: '#birthday'},
+              {name: 'Чокопайки', link: '#chokopai'},
+              {name: 'Глинтвейн', link: '#mulled'}
+            ]},
+          {seasons: [
+              {name: 'Поход на батуты', link: '#trampoline'}
+            ]}
+        ]},
+      {year: [
+          {seasons: [
+              {name: 'Рыбинск', link: '#home'},
+            ]}
+        ]}
+    ],
+
+
     links_2022: [
       {name: 'Проводы', link: '#sendoff'},
       {name: 'Ожидание', link: '#waiting'},
@@ -21,41 +45,43 @@ export default class Layout extends Component {
     links_2023: [
       {name: 'Рыбинск', link: '#home'},
     ]
-  }
+}
 
 
-  toggleMenuHandler = () => {
-    this.setState({
-      menu: !this.state.menu
-    })
-  }
+toggleMenuHandler = () => {
+  this.setState({
+    menu: !this.state.menu
+  })
+}
 
-  menuCloseHandler = () => {
-    this.setState({
-      menu: false
-    })
-  }
+menuCloseHandler = () => {
+  this.setState({
+    menu: false
+  })
+}
 
-  render() {
-    return (
-        <div className={'Layout'}>
+render()
+{
+  return (
+      <div className={'Layout'}>
 
-          <Drawer
-              isOpen={this.state.menu}
-              onClose={this.menuCloseHandler}
-              links_2022={this.state.links_2022}
-              links_2023={this.state.links_2023}
-          />
+        <Drawer
+            isOpen={this.state.menu}
+            onClose={this.menuCloseHandler}
+            links_2022={this.state.links_2022}
+            links_2023={this.state.links_2023}
+            links={this.state.links}
+        />
 
-          <MenuToggle
-              onToggle={this.toggleMenuHandler}
-              isOpen={this.state.menu}
-          />
+        <MenuToggle
+            onToggle={this.toggleMenuHandler}
+            isOpen={this.state.menu}
+        />
 
-          <main>
-            {this.props.children}
-          </main>
-        </div>
-    )
-  }
+        <main>
+          {this.props.children}
+        </main>
+      </div>
+  )
+}
 }

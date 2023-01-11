@@ -7,8 +7,98 @@ import Layout from "./hoc/Layout/Layout";
 
 class App extends Component {
 
+  listenScrollEvent = e => {
+    // console.log(window.scrollY)
+        if (window.scrollY > 3130 && window.scrollY < 5612) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+
+          document.getElementById('waiting').style.position = 'sticky'
+        } else if (window.scrollY > 5612 && window.scrollY < 15230) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('ministry').style.position = 'sticky'
+        } else if (window.scrollY > 15230 && window.scrollY < 20570) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('photo_session').style.position = 'sticky'
+        } else if (window.scrollY > 20570 && window.scrollY < 24452) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('birthday').style.position = 'sticky'
+        } else if (window.scrollY > 24452 && window.scrollY < 31008) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('chokopai').style.position = 'sticky'
+        } else if (window.scrollY > 31008 && window.scrollY < 35848) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('mulled').style.position = 'sticky'
+        } else if (window.scrollY > 35847) {
+          document.getElementById('sendoff').style.position = 'static'
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('trampoline').style.position = 'sticky'
+        } else {
+          document.getElementById('ministry').style.position = 'static'
+          document.getElementById('photo_session').style.position = 'static'
+          document.getElementById('birthday').style.position = 'static'
+          document.getElementById('chokopai').style.position = 'static'
+          document.getElementById('mulled').style.position = 'static'
+          document.getElementById('trampoline').style.position = 'static'
+          document.getElementById('waiting').style.position = 'static'
+
+          document.getElementById('sendoff').style.position = 'sticky'
+        }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent);
+
+  }
 
   render() {
+
 
     return (
         <Layout>
@@ -30,13 +120,13 @@ class App extends Component {
               <h2 className={'Title'} id='photo_session'>ЛЕТНЯЯ ФОТОСЕССИЯ</h2>
               <PictureBox block={this.props.photo_session}/>
 
-              <h2 className={'Title'} id='birthday'>ЛЕТНЯЯ ФОТОСЕССИЯ</h2>
+              <h2 className={'Title'} id='birthday'>День рождения</h2>
               <PictureBox block={this.props.birthday}/>
 
               <h2 className={'Title'} id='chokopai'>ЧОКОПАЙКИ</h2>
               <PictureBox block={this.props.chokopai}/>
 
-              <h2 className={'Title'} id='mulled'>ГЛИНТЕЙН!!!</h2>
+              <h2 className={'Title'} id='mulled'>ГЛИНТВЕЙН!!!</h2>
               <PictureBox block={this.props.mulled}/>
 
               <h2 className={'Title'} id='trampoline'>Неожиданный поход в батутку</h2>

@@ -12,7 +12,7 @@
   background-color: rgba(2, 122, 53, 0.7);
   width: 100%;
   height: 60px;
-  position: sticky;
+  /*position: sticky;*/
   top: 0;
 }
 
@@ -31,6 +31,12 @@
   padding-top: 15px;
   color: white;
   background-color: rgba(2, 122, 53, 0.7);
+  top: 0;
+}
+
+
+#sendoff{
+
 }
 
 @media screen and (max-width: 450px){
