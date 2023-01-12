@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/memory/static/css/main.e48f7300.css",
-    "main.js": "/memory/static/js/main.20b8f780.js",
+    "main.css": "/memory/static/css/main.49d69ccb.css",
+    "main.js": "/memory/static/js/main.86ee6764.js",
     "static/js/787.18b835fd.chunk.js": "/memory/static/js/787.18b835fd.chunk.js",
     "static/media/trampoline_7.gif": "/memory/static/media/trampoline_7.0d282a449a577d92aa82.gif",
     "static/media/main.png": "/memory/static/media/main.142b074867c9654a2f01.png",
@@ -69,12 +69,12 @@
     "static/media/photo_session_3.jpg": "/memory/static/media/photo_session_3.c16eb33cf061947c1383.jpg",
     "static/media/photo_session_4.jpg": "/memory/static/media/photo_session_4.06e8c0905722c68e38b3.jpg",
     "index.html": "/memory/index.html",
-    "main.e48f7300.css.map": "/memory/static/css/main.e48f7300.css.map",
-    "main.20b8f780.js.map": "/memory/static/js/main.20b8f780.js.map",
+    "main.49d69ccb.css.map": "/memory/static/css/main.49d69ccb.css.map",
+    "main.86ee6764.js.map": "/memory/static/js/main.86ee6764.js.map",
     "787.18b835fd.chunk.js.map": "/memory/static/js/787.18b835fd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e48f7300.css",
-    "static/js/main.20b8f780.js"
+    "static/css/main.49d69ccb.css",
+    "static/js/main.86ee6764.js"
   ]
 }
