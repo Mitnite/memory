@@ -25,7 +25,6 @@ class App extends Component {
     this.state.links.forEach((link) => {
       if (link.h === 0) {
         this.getHeight(link.name)
-        console.log(this.state.links)
       }
     })
 
