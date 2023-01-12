@@ -7,143 +7,41 @@ import Layout from "./hoc/Layout/Layout";
 
 class App extends Component {
 
-state ={
-  sendoff: 0,
-  waiting: 0,
-  ministry: 0,
-  photo_session: 0,
-  birthday: 0,
-  chokopai: 0,
-  mulled: 0,
-  trampoline: 0,
-
-}
+  state = {
+    links: [
+      {name: 'sendoff', h: 0},
+      {name: 'waiting', h: 0},
+      {name: 'ministry', h: 0},
+      {name: 'photo_session', h: 0},
+      {name: 'birthday', h: 0},
+      {name: 'chokopai', h: 0},
+      {name: 'mulled', h: 0},
+      {name: 'trampoline', h: 0},
+    ]
+  }
 
   listenScrollEvent = e => {
-    if (this.state.sendoff === 0) {
-      let sendoff = this.getHeight('sendoff')
-      this.setState({sendoff})
-    }
 
-    if (this.state.waiting === 0) {
-      let waiting = this.getHeight('waiting')
-      this.setState({waiting})
-    }
+    this.state.links.forEach((link) => {
+      if (link.h === 0) {
+        this.getHeight(link.name)
+        console.log(this.state.links)
+      }
+    })
 
-    if (this.state.ministry === 0) {
-      let ministry = this.getHeight('ministry')
-      this.setState({ministry})
-    }
-
-    if (this.state.photo_session === 0) {
-      let photo_session = this.getHeight('photo_session')
-      this.setState({photo_session})
-    }
-
-    if (this.state.birthday === 0) {
-      let birthday = this.getHeight('birthday')
-      this.setState({birthday})
-    }
-
-    if (this.state.chokopai === 0) {
-      let chokopai = this.getHeight('chokopai')
-      this.setState({chokopai})
-    }
-
-    if (this.state.mulled === 0) {
-      let mulled = this.getHeight('mulled')
-      this.setState({mulled})
-    }
-
-    if (this.state.trampoline === 0) {
-      let trampoline = this.getHeight('trampoline')
-      this.setState({trampoline})
-    }
-
-
-    console.log(this.state)
-
-    if (window.scrollY > this.state.waiting && window.scrollY < this.state.ministry) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-
-      document.getElementById('waiting').style.position = 'sticky'
-    } else if (window.scrollY > this.state.ministry && window.scrollY < this.state.photo_session) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('ministry').style.position = 'sticky'
-    } else if (window.scrollY > this.state.photo_session && window.scrollY < this.state.birthday) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('photo_session').style.position = 'sticky'
-    } else if (window.scrollY > this.state.birthday && window.scrollY < this.state.chokopai) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('birthday').style.position = 'sticky'
-    } else if (window.scrollY > this.state.chokopai && window.scrollY < this.state.mulled) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('chokopai').style.position = 'sticky'
-    } else if (window.scrollY > this.state.mulled && window.scrollY < this.state.trampoline) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('mulled').style.position = 'sticky'
-    } else if (window.scrollY > this.state.trampoline) {
-      document.getElementById('sendoff').style.position = 'static'
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('trampoline').style.position = 'sticky'
-    } else {
-      document.getElementById('ministry').style.position = 'static'
-      document.getElementById('photo_session').style.position = 'static'
-      document.getElementById('birthday').style.position = 'static'
-      document.getElementById('chokopai').style.position = 'static'
-      document.getElementById('mulled').style.position = 'static'
-      document.getElementById('trampoline').style.position = 'static'
-      document.getElementById('waiting').style.position = 'static'
-
-      document.getElementById('sendoff').style.position = 'sticky'
-    }
+    this.state.links.forEach((link) => {
+      if (window.scrollY > link.h) {
+        document.getElementById('sendoff').style.position = 'static'
+        document.getElementById('ministry').style.position = 'static'
+        document.getElementById('photo_session').style.position = 'static'
+        document.getElementById('birthday').style.position = 'static'
+        document.getElementById('chokopai').style.position = 'static'
+        document.getElementById('mulled').style.position = 'static'
+        document.getElementById('trampoline').style.position = 'static'
+        document.getElementById('waiting').style.position = 'static'
+        document.getElementById(link.name).style.position = 'sticky'
+      }
+    })
   }
 
   componentDidMount() {
@@ -152,13 +50,21 @@ state ={
 
   getHeight = (id) => {
     let elem = document.getElementById(id);
-    if (elem !== null) {
-      let rect = elem.getBoundingClientRect();
-      return rect.y
-/*      this.setState({
-        sendoff: rect.y
-      })*/
-    }
+    this.state.links.forEach((link) => {
+      if (link.name === id && link.h === 0) {
+        if (elem !== null) {
+          let rect = elem.getBoundingClientRect();
+          link.h = rect.y
+          const links = [...this.state.links]
+          links.forEach((links) => {
+            if (links.name === link.name) {
+              links.h = link.h
+            }
+          })
+          this.setState({links})
+        }
+      }
+    })
   }
 
 
@@ -182,25 +88,13 @@ state ={
               <PictureBox block={this.props.ministry}/>
 
               <h2 className={'Title'} id='photo_session'>ЛЕТНЯЯ ФОТОСЕССИЯ</h2>
-
-              <div style={{
-                display: 'block',
-                margin: '0 auto'
-
-              }}>
-
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  flexDirection: 'row',
-                  alignItems: 'stretch',
-                }}>
+              <div className={'container'}>
+                <div className={'row'}>
                   <PictureBox block={this.props.photo_session_left}/>
-
                   <PictureBox block={this.props.photo_session_right}/>
                 </div>
-
               </div>
+
               <h2 className={'Title'} id='birthday'>День рождения</h2>
               <PictureBox block={this.props.birthday}/>
 

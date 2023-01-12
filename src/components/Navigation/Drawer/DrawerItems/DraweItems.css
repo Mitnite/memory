@@ -17,3 +17,11 @@
 .DrawerItems a:hover, .active{
     opacity: .7;
 }
+@media screen and (max-width: 450px) {
+
+    .DrawerItems a {
+        font-size: 15px;
+    }
+
+
+}
